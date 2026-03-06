@@ -6,7 +6,6 @@ def filter_by_state(data: List[Dict], state: str = 'EXECUTED') -> List[Dict]:
     :param data: Список словарей для фильтрации.
     :param state: Статус, по которому фильтруем (по умолчанию 'EXECUTED').
     :return: Новый список словарей с подходящим статусом."""
-
     return [item for item in data if item.get('state') == state]
 
 
