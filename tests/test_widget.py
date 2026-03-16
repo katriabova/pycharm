@@ -1,5 +1,8 @@
 import pytest
-from src.widget import mask_account_card, get_date
+
+from src.widget import get_date
+from src.widget import mask_account_card
+
 
 @pytest.mark.parametrize("input_str, expected", [
     ("Visa Gold 7000792289606361", "Visa Gold 7000 79** **** 6361"),
