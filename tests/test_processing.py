@@ -14,6 +14,7 @@ def test_filter_by_state(transactions_data, state, expected_count):
     result = filter_by_state(transactions_data, state)
     assert len(result) == expected_count
 
+
 def test_sort_by_date(transactions_data):
     """Тест сортировки по дате (по убыванию)."""
     result = sort_by_date(transactions_data)

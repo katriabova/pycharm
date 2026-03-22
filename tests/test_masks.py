@@ -12,9 +12,10 @@ from src.masks import get_mask_card_number
 def test_get_mask_card_number(card, expected):
     assert get_mask_card_number(card) == expected
 
+
 @pytest.mark.parametrize("account, expected", [
     ("73654108430135874305", "**4305"),
-    ("12345", "**2345"), # Короткий номер
+    ("12345", "**2345"),  # Короткий номер
     ("", "")
 ])
 def test_get_mask_account(account, expected):
