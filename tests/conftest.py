@@ -9,20 +9,20 @@ def transactions_data():
             "state": "EXECUTED",
             "date": "2023-01-01T12:00:00.000",
             "operationAmount": {"currency": {"code": "USD"}},
-            "description": "Перевод организации"
+            "description": "Перевод организации",
         },
         {
             "id": 2,
             "state": "CANCELED",
             "date": "2023-02-01T12:00:00.000",
             "operationAmount": {"currency": {"code": "USD"}},
-            "description": "Перевод со счета на счет"
+            "description": "Перевод со счета на счет",
         },
         {
             "id": 3,
             "state": "EXECUTED",
             "date": "2023-03-01T12:00:00.000",
             "operationAmount": {"currency": {"code": "RUB"}},
-            "description": "Оплата услуг"
-        }
+            "description": "Оплата услуг",
+        },
     ]

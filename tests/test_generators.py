@@ -20,10 +20,10 @@ def test_transaction_descriptions(transactions_data):
     assert next(descriptions) == "Перевод со счета на счет"
 
 
-@pytest.mark.parametrize("start, stop, expected", [
-    (1, 1, "0000 0000 0000 0001"),
-    (9999999999999999, 9999999999999999, "9999 9999 9999 9999")
-])
+@pytest.mark.parametrize(
+    "start, stop, expected",
+    [(1, 1, "0000 0000 0000 0001"), (9999999999999999, 9999999999999999, "9999 9999 9999 9999")],
+)
 def test_card_number_generator(start, stop, expected):
     """Проверка формата номера карты."""
     gen = card_number_generator(start, stop)
