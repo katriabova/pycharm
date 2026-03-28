@@ -4,3 +4,4 @@ __pycache__/
 ../htmlcov/
 .venv/
 bank_widget/.idea/
+.env
