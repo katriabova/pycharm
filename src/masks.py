@@ -1,10 +1,14 @@
-def get_mask_card_number(card_number: str) -> str:
-    if not card_number:
-        return ""
-    return f"{card_number[:4]} {card_number[4:6]}** **** {card_number[-4:]}"
+import logging
+import os
 
+# Путь к файлу лога (поднимаемся на уровень выше из src в корень)
+log_path = os.path.join(os.path.dirname(__file__), '..', 'logs', 'masks.log')
 
-def get_mask_account(account_number: str) -> str:
-    if not account_number:
-        return ""
-    return f"**{account_number[-4:]}"
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+# mode='w' чтобы файл очищался при каждом запуске
+file_handler = logging.FileHandler(log_path, mode='w', encoding='utf-8')
+file_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+file_handler.setFormatter(file_formatter)
+logger.addHandler(file_handler)
